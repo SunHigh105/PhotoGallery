@@ -1,0 +1,83 @@
+/* Global */
+body{
+    margin: 0;
+}
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+.page-bg{
+    /* background-color: #ebebeb; */
+}
+.container{
+    padding-top: 60px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* header */
+.site-header{
+    background-color: #ebebeb;
+    height: 50px;
+    padding: 5px;
+    /* display: flex; */
+    position: fixed;   
+    width: 100%;
+    z-index: 1;
+}
+#header-inner{
+    width: 85%;
+    margin: 0 auto;
+    position:relative;
+}
+#logo{
+    float: left;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+}
+header ul{
+    display: block;
+    list-style: none;
+    float: right;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+header ul li{
+    width: 40%;
+    padding: 5px 15px;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+header ul li ul{
+    /* display: none; */
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    background-color: #ebebeb;
+}
+
+header ul lid
+
+/* photo */
+.article{
+    width: 350px;
+    padding: 10px;
+    z-index: 0;
+}
+.photoframe{
+    width: 350px;
+    float: left;
+    box-shadow: 2px 2px 2px lightgray;
+    position: relative;
+}
+.photoframe img{
+    width: 100%;
+}
