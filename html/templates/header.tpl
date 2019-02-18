@@ -10,24 +10,26 @@
         <header class="site-header">
             <div id="header-inner">
                 <div id="logo">Photo Gallery</div>
-                <ul>
-                    <li>
-                        Category
-                        <ul>
-                            <li>Nature</li>
-                            <li>Food</li>
-                            <li>Animal</li>
-                        </ul>
-                    </li>
-                        
-                    <li>Backnumber
-                        <ul>
-                            <li>2019</li>
-                            <li>2018</li>
-                            <li>2017</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div id="pulldown">
+                    <ul>
+                        <li>
+                            Category
+                            <ul>
+                                <li>Nature</li>
+                                <li>Food</li>
+                                <li>Animal</li>
+                            </ul>
+                        </li>
+                            
+                        <li>Backnumber
+                            <ul>
+                                <li>2019</li>
+                                <li>2018</li>
+                                <li>2017</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <div class="page-bg">

@@ -1,14 +1,16 @@
 /* Global */
 body{
     margin: 0;
+    background-color: #fafafa;
 }
 ul, li{
     margin: 0;
     padding: 0;
 }
 
-.page-bg{
-    /* background-color: #ebebeb; */
+h1{
+    font-weight: normal;
+    border-bottom: 1px solid rgba(0,0,0,.5975);
 }
 .container{
     padding-top: 60px;
@@ -18,13 +20,14 @@ ul, li{
 
 /* header */
 .site-header{
-    background-color: #ebebeb;
+    background-color: #fafafa;
     height: 50px;
     padding: 5px;
     /* display: flex; */
     position: fixed;   
     width: 100%;
     z-index: 1;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
 }
 #header-inner{
     width: 85%;
@@ -33,38 +36,35 @@ ul, li{
 }
 #logo{
     float: left;
-    font-weight: bold;
     font-size: 25px;
     padding: 10px;
 }
-header ul{
-    display: block;
-    list-style: none;
+#pulldown{
     float: right;
-    width: 400px;
-    margin: 0 auto;
-    position: relative;
+}
+
+header ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
 }
 header ul li{
-    width: 40%;
-    padding: 5px 15px;
+    width: 200px;
+    line-height: 40px;
     float: left;
-    font-weight: bold;
     text-align: center;
     cursor: pointer;
-    position: relative;
+    background-color: #fafafa;
 }
 
-header ul li ul{
-    /* display: none; */
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    display: block;
-    background-color: #ebebeb;
+header ul li ul li{
+    display: none;
 }
 
-header ul lid
+header ul li:hover ul li{
+    display:block;
+    border: 1px solid rgba(0,0,0,.0975);
+}
 
 /* photo */
 .article{
@@ -75,7 +75,7 @@ header ul lid
 .photoframe{
     width: 350px;
     float: left;
-    box-shadow: 2px 2px 2px lightgray;
+    border: 1px solid rgba(0,0,0,.0975);
     position: relative;
 }
 .photoframe img{
