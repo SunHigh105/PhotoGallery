@@ -67,13 +67,29 @@ header ul li:hover ul li{
 }
 
 /* photo */
-.article{
-    width: 350px;
-    padding: 10px;
-    z-index: 0;
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
+/* article{
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    z-index: 0;
+} */
+
+.photo-entry{
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+
+figure{
+    margin: 0px;
+    padding: 0px;
+}
+
 .photoframe{
-    width: 350px;
+    width: 330px;
     float: left;
     border: 1px solid rgba(0,0,0,.0975);
     position: relative;
