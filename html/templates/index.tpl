@@ -5,9 +5,11 @@
 	<div class="wrapper">
 	<%foreach from=$objects item=obj%>
 		<div class="photo-entry">
-			<figure class="photoframe">
-				<img src=<%$IMG_URL%>/<%$obj.Key%>>
-			</figure>
+			<a href="#">
+				<figure class="photoframe">
+					<img src=<%$IMG_URL%>/<%$obj.Key%>>
+				</figure>
+			</a>
 		</div>
 	<%/foreach%>
 	</div>
@@ -17,7 +19,10 @@
 	<div id="popup-bg">
 		<span id="close-popup">&times;</span>
 		<div class="popup">
-			<img src="https://s3-ap-northeast-1.amazonaws.com/straysheep-photogallery/IMG_3466.jpg">
+			<img src="">
+			<div class="caption">
+				<p>キャプションだよん</p>
+			</div>
 		</div>
 	</div>
 <%/block%>

@@ -87,21 +87,27 @@ header ul li:hover ul li{
     cursor: pointer;
 }
 
+.popup, .popup img, caption{
+    width: 700px;
+}
+
 .popup{
-    width: 800px;
-    height: 400px;
+    height: 600px;
     background-color: #fff;
-    border-radius: 5px;
     margin: 0 auto;
-    margin-top: 150px;
-    /* position: relative; */
+    margin-top: 100px;
+    border: 1px solid rgba(0,0,0,.0975);
 }
 
 .popup img{
-    width: 80%;
+    height: 450px;
+    object-fit: cover;
 }
 
-
+.caption{
+    height: 150px;
+    padding: 10px;
+}
 
 /* photo */
 .wrapper{
@@ -127,5 +133,5 @@ figure{
     position: relative;
 }
 .photoframe img{
-    width: 100%;
+    width: 330px;
 }
