@@ -23,7 +23,6 @@ h1{
     background-color: #fafafa;
     height: 50px;
     padding: 5px;
-    /* display: flex; */
     position: fixed;   
     width: 100%;
     z-index: 1;
@@ -66,21 +65,54 @@ header ul li:hover ul li{
     border: 1px solid rgba(0,0,0,.0975);
 }
 
+/* popup */
+#popup-bg{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    z-index: 1;
+    position: fixed;
+}
+
+#close-popup{
+    width: 30px;
+    height: 30px;
+    float: right;
+    color: #fff;
+    font-size: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.popup{
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 150px;
+    /* position: relative; */
+}
+
+.popup img{
+    width: 80%;
+}
+
+
+
 /* photo */
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-/* article{
-    margin: 0px;
-    padding: 0px;
-    width: 300px;
-    z-index: 0;
-} */
 
 .photo-entry{
     margin: 0 auto;
     padding: 10px 0px;
+    cursor: pointer;
 }
 
 figure{

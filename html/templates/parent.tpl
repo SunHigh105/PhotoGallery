@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
         <title>Photo Gallery</title>
         <link rel="stylesheet" type="text/css" href="css/style.css?<%time()%>">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/main.js?<%time()%>"></script>
 	</head>
 	<body>
@@ -34,3 +35,9 @@
         </header>
         <div class="page-bg">
             <div class="container">
+            <%block "content"%><%/block%>
+            </div>
+        </div>
+        <%block "popup"%><%/block%>
+    </body>
+</html>
