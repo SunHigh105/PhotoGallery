@@ -4,13 +4,9 @@
 	<h1>2019</h1>
 	<div class="wrapper">
 	<%foreach from=$objects item=obj%>
-		<div class="photo-entry">
-			<a href="#">
-				<figure class="photoframe">
-					<img src=<%$IMG_URL%>/<%$obj.Key%>>
-				</figure>
-			</a>
-		</div>
+		<figure class="col-3 photoframe">
+			<img src=<%$IMG_URL%>/<%$obj.Key%>>
+		</figure>
 	<%/foreach%>
 	</div>
 <%/block%>
