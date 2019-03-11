@@ -99,30 +99,29 @@ header ul li:hover ul li{
     float: right;
     color: #fff;
     font-size: 50px;
-    padding: 0 20px;
+    padding-top: 15vh;
+    padding-right: 20px;
     cursor: pointer;
 }
 
-.popup, .popup img, caption{
-    width: 700px;
+.popup, caption{
+    width: 100%;
 }
 
 .popup{
-    height: 600px;
-    background-color: #fff;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 25vh;
+    vertical-align: middle;
     border: 1px solid rgba(0,0,0,.0975);
 }
 
 .popup img{
-    height: 450px;
-    object-fit: cover;
+    width: 100%;
 }
 
 .caption{
     height: 150px;
-    padding: 10px;
+    background-color: #fff;
+    padding: 15px;
 }
 
 /* photo */
@@ -139,13 +138,10 @@ figure{
 }
 
 .photoframe{
-    /* float: left; */
     border: 1px solid rgba(0,0,0,.0975);
     cursor: pointer;
-    /* position: relative; */
 }
 .photoframe img{
-    /* width: 330px; */
     width: 100%;
     object-fit: cover;
 }
@@ -155,19 +151,39 @@ figure{
 /*for tablet */
 @media (min-width: 600px){
     .wrapper{
-        display: grid;
-        align-content: center;
         grid-template-columns: auto auto;
         grid-gap: 30px 30px;
     }
+
+    #close-popup{
+        padding: 0 20px;
+    }
+
+    .popup, caption{
+        width: 550px;
+    }
+    
+    .popup{
+        height: 530px;
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+
 }
 
 /* for desktop */
 @media (min-width: 768px){
     .wrapper{
-        display: grid;
-        align-content: center;
         grid-template-columns: auto auto auto;
         grid-gap: 30px 30px;
+    }
+
+    .popup, caption{
+        width: 700px;
+    }
+    
+    .popup{
+        height: 600px;
+        margin-top: 100px;
     }
 }
