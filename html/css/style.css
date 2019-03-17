@@ -47,7 +47,7 @@ h1{
 #header-inner{
     width: 85%;
     margin: 0 auto;
-    position:relative;
+    position: relative;
 }
 #logo{
     float: left;
@@ -128,30 +128,29 @@ h1{
     transform: translateX(0%);
 }
 
-
-/* #nav-content ul{ */
 ul.menu-first-level{
     margin: 0px 10px;
-    padding: 0px;
+    padding: 5px 0px;
     list-style: none;
     position: relative;
 }
-header ul li{
+.menu-first-level li{
     width: 200px;
     line-height: 40px;
-    float: left;
-    text-align: center;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.menu-first-level li span{
+    padding: 3px 3px;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    font-weight: bold;
+}
+
+.menu-second-level li{
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
     cursor: pointer;
-    background-color: #fafafa;
-}
-
-header ul li ul li{
-    display: none;
-}
-
-header ul li:hover ul li{
-    display:block;
-    border: 1px solid rgba(0,0,0,.0975);
 }
 
 /* popup */
@@ -219,13 +218,63 @@ figure{
     object-fit: cover;
 }
 
-/* for mobile phone */
-
 /*for tablet */
 @media (min-width: 600px){
     .wrapper{
         grid-template-columns: auto auto;
         grid-gap: 30px 30px;
+    }
+
+    /* ハンバーガーメニューを非表示*/
+    #nav-input{
+        display: none;
+    }
+
+    #nav-open{
+        display: none;
+    }
+
+    /* ハンバーガーメニューの背景を非表示*/
+    #nav-input:checked ~ #nav-close{
+        display: none;
+    }
+
+    #nav-content{
+        background: none;
+        position: relative;
+        width: 35%;
+        height: 50px;
+        z-index: 0;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+    ul.menu-first-level{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .menu-first-level li{
+        width: 150px;
+        border-bottom: none;
+        padding-top: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .menu-first-level li span{
+        font-weight: normal;
+    }
+
+    .menu-second-level li{
+        display: none;
+        background: none;
+    }
+    
+    .menu-first-level li:hover .menu-second-level li{
+        display:block;
+        border: 1px solid rgba(0,0,0,.0975);
+        background-color: #fafafa;
     }
 
     #close-popup{

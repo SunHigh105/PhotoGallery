@@ -24,7 +24,7 @@
                     <div id="nav-content">
                         <ul class="menu-first-level">
                             <li>
-                                Category
+                                <span>Category</span>
                                 <ul class="menu-second-level">
                                     <li>Nature</li>
                                     <li>Food</li>
@@ -32,7 +32,8 @@
                                 </ul>
                             </li>
                                 
-                            <li>Backnumber
+                            <li>
+                                <span>Backnumber</span>
                                 <ul class="menu-second-level">
                                     <li>2019</li>
                                     <li>2018</li>
