@@ -8,6 +8,8 @@ $smarty = new Smarty();
 
 $smarty->template_dir = './templates/';
 $smarty->compile_dir  = './templates_c/';
+$smarty->left_delimiter = '<%';
+$smarty->right_delimiter = '%>';
 
 // Load .env file
 $dotenv = Dotenv\Dotenv::create(__DIR__);
