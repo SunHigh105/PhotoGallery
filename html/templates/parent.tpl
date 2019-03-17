@@ -18,24 +18,29 @@
             <div id="header-inner">
                 <div id="logo">Photo Gallery</div>
                 <div id="pulldown">
-                    <ul>
-                        <li>
-                            Category
-                            <ul>
-                                <li>Nature</li>
-                                <li>Food</li>
-                                <li>Animal</li>
-                            </ul>
-                        </li>
-                            
-                        <li>Backnumber
-                            <ul>
-                                <li>2019</li>
-                                <li>2018</li>
-                                <li>2017</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <input id="nav-input" type="checkbox" class="nav-unshown">
+                    <label id="nav-open" for="nav-input"><span></span></label>
+                    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                    <div id="nav-content">
+                        <ul class="menu-first-level">
+                            <li>
+                                Category
+                                <ul class="menu-second-level">
+                                    <li>Nature</li>
+                                    <li>Food</li>
+                                    <li>Animal</li>
+                                </ul>
+                            </li>
+                                
+                            <li>Backnumber
+                                <ul class="menu-second-level">
+                                    <li>2019</li>
+                                    <li>2018</li>
+                                    <li>2017</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
