@@ -7,7 +7,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./html:/var/www/html
+      - .:/var/www/html
     depends_on:
       - db
  
@@ -15,5 +15,8 @@ services:
     image: postgres:11.2
     ports:
       - 5433:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
-      - .:/docker-entrypoint-initdb.d   <- (4)
+      - .:/docker-entrypoint-initdb.d
