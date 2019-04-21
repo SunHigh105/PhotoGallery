@@ -26,9 +26,9 @@
                             <li>
                                 <span>Category</span>
                                 <ul class="menu-second-level category">
-                                <%foreach from=$category item=row%>
-                                    <li><%$row.name%></li>
-                                <%/foreach%>
+                                    <%foreach from=$category item=row%>
+                                        <a href="category.php?category_id=<%$row.id%>"><li><%$row.name%></li></a>
+                                    <%/foreach%>
                                 </ul>
                             </li>
                                 
