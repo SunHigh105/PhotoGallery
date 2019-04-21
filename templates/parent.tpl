@@ -26,9 +26,9 @@
                             <li>
                                 <span>Category</span>
                                 <ul class="menu-second-level">
-                                    <li>Nature</li>
-                                    <li>Food</li>
-                                    <li>Animal</li>
+                                <%foreach from=$category item=row%>
+                                    <li><%$row.name%></li>
+                                <%/foreach%>
                                 </ul>
                             </li>
                                 
@@ -52,4 +52,7 @@
         </div>
         <%block "popup"%><%/block%>
     </body>
+    <footer>
+        <p>©️2019 Ayaka Hidaka</p>
+    </footer>
 </html>

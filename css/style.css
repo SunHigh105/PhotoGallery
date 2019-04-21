@@ -2,6 +2,7 @@
 body{
     margin: 0;
     background-color: #fafafa;
+    font-family: "YuGothic";
 }
 ul, li{
     margin: 0;
@@ -216,6 +217,11 @@ figure{
 .photoframe img{
     width: 100%;
     object-fit: cover;
+}
+
+/* footer */
+footer p{
+    text-align: center;
 }
 
 /*for tablet */

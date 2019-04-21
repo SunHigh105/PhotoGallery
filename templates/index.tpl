@@ -3,9 +3,9 @@
 <%block name="content"%>	
 	<h1>2019</h1>
 	<div class="wrapper">
-	<%foreach from=$objects item=obj%>
-		<figure class="col-3 photoframe">
-			<img src=<%$IMG_URL%>/<%$obj.Key%>>
+	<%foreach from=$caption item=row%>
+		<figure class="col-3 photoframe" photo-id=<%$row.id%> category=<%$row.category_id%>>
+			<img src=<%$IMG_URL%>/<%$row.capture_path%>>
 		</figure>
 	<%/foreach%>
 	</div>
@@ -17,9 +17,8 @@
 		<div class="popup">
 			<img src="">
 			<div class="caption">
-				<p>2018/03/24</p>
-				<p>目黒川の桜並木
-				視界が一面桜に覆われて圧巻だった</p>
+				<p class="date-token"></p>
+				<p class="comment"></p>
 			</div>
 		</div>
 	</div>

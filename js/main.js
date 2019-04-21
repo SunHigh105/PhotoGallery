@@ -24,19 +24,38 @@ $(document).ready(function(){
     // 画像をクリックしたらポップアップ表示
     $('.photoframe').click(function(){
         // クリックした画像の番号
-        var $num = $('.photoframe').index(this);
-        // パスを取得
-        var $path = $('.photoframe').eq($num).find('img').attr('src');
+        var num = $('.photoframe').index(this);
+        // 画像パスを取得
+        var path = $('.photoframe').eq(num).find('img').attr('src');
 
-        $('#popup-bg').css('display', 'block');
+        // $('#popup-bg').css('display', 'block');
+        $('#popup-bg').fadeIn(500);
         // 画像パスをポップアップに埋め込む
-        $('.popup').find('img').attr('src', $path);
+        $('.popup').find('img').attr('src', path);
         // ポップアップ表示時にはスクロールを止める
         $('body').css('overflow', 'hidden');
+
+        // キャプションを取得
+        $.ajax({
+            type: 'POST',
+            url: 'ajax.php',
+            dataType: 'json',
+            data: {
+                photo_id: $('.photoframe').eq(num).attr('photo-id')
+            }
+        }).done(function(data){
+            $('.date-token').text(data.date_token);
+            $('.comment').text(data.comment);
+
+        }).fail(function(){
+            alert('Data connection error occured');
+        });
+
     });
 
     // 閉じるボタンor背景クリックでポップアップ閉じる
     function closePopup(){
+        // $('#popup-bg').fadeOut(500);
         $('#popup-bg').css('display', 'none');
         // スクロール再開
         $('body').removeAttr('style');
