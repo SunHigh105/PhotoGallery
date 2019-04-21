@@ -30,7 +30,7 @@ class DataObject{
     //コメント
     public function photo(){
         try{
-            $sql = 'select id, capture_path, category_id from photo order by date_token desc';
+            $sql = 'select id, date_token, capture_path, category_id from photo order by date_token desc';
             $stmt = $this->dbObject()->query($sql);
             $result = [];
             foreach($stmt->fetchAll() as $row){

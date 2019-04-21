@@ -13,6 +13,11 @@ h1{
     font-weight: normal;
     border-bottom: 1px solid rgba(0,0,0,.5975);
 }
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
 .container{
     padding-top: 60px;
     width: 85%;
@@ -140,6 +145,7 @@ ul.menu-first-level{
     line-height: 40px;
     padding-top: 15px;
     padding-left: 15px;
+    cursor: pointer;
 }
 
 .menu-first-level li span{

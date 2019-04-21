@@ -1,14 +1,18 @@
 <%extends file='parent.tpl'%>
 
-<%block name="content"%>	
-	<h1>2019</h1>
-	<div class="wrapper">
-	<%foreach from=$caption item=row%>
-		<figure class="col-3 photoframe" photo-id=<%$row.id%> category=<%$row.category_id%>>
-			<img src=<%$IMG_URL%>/<%$row.capture_path%>>
-		</figure>
+<%block name="content"%>
+	<%foreach from=$years item=year%>	
+		<h1 id="<%$year%>"><%$year%></h1>
+		<div class="wrapper">
+		<%foreach from=$caption item=row%>
+			<%if $row.date_token|substr:0:4 == $year%>
+				<figure class="col-3 photoframe" photo-id=<%$row.id%> category=<%$row.category_id%>>
+					<img src=<%$IMG_URL%>/<%$row.capture_path%>>
+				</figure>
+			<%/if%>
+		<%/foreach%>
+		</div>
 	<%/foreach%>
-	</div>
 <%/block%>
 
 <%block name="popup"%>

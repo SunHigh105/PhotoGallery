@@ -25,7 +25,7 @@
                         <ul class="menu-first-level">
                             <li>
                                 <span>Category</span>
-                                <ul class="menu-second-level">
+                                <ul class="menu-second-level category">
                                 <%foreach from=$category item=row%>
                                     <li><%$row.name%></li>
                                 <%/foreach%>
@@ -34,10 +34,10 @@
                                 
                             <li>
                                 <span>Backnumber</span>
-                                <ul class="menu-second-level">
-                                    <li>2019</li>
-                                    <li>2018</li>
-                                    <li>2017</li>
+                                <ul class="menu-second-level backnumber">
+                                    <%foreach from=$years item=year%>
+                                        <a href="#<%$year%>"><li><%$year%></li></a>
+                                    <%/foreach%>
                                 </ul>
                             </li>
                         </ul>
