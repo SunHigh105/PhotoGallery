@@ -31,6 +31,11 @@ if(isset($_GET['category'])){
 	$index = $years;
 }
 
+// Redirect root page if get an incorrect param
+if(!$photos){
+	header("Location: / ");
+}
+
 $IMG_URL = 'https://s3-ap-northeast-1.amazonaws.com/'.getenv('S3_BUCKET_NAME');
 
 
