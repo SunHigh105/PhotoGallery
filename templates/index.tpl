@@ -1,16 +1,24 @@
 <%extends file='parent.tpl'%>
 
 <%block name="content"%>
-	<%foreach from=$years item=year%>	
-		<h1 id="<%$year%>"><%$year%></h1>
+	<%foreach from=$index item=row%>	
+		<h1 id="<%$row%>"><%$row%></h1>
 		<div class="wrapper">
-		<%foreach from=$caption item=row%>
-			<%if $row.date_token|substr:0:4 == $year%>
+		<%if $index|@count >= 2 %>
+			<%foreach from=$photos item=row%>
+				<%if $row.date_token|substr:0:4 == $year%>
+					<figure class="col-3 photoframe" photo-id=<%$row.id%> category=<%$row.category_id%>>
+						<img src=<%$IMG_URL%>/<%$row.capture_path%>>
+					</figure>
+				<%/if%>
+			<%/foreach%>
+		<%else%>
+			<%foreach from=$photos item=row%>
 				<figure class="col-3 photoframe" photo-id=<%$row.id%> category=<%$row.category_id%>>
 					<img src=<%$IMG_URL%>/<%$row.capture_path%>>
 				</figure>
-			<%/if%>
-		<%/foreach%>
+			<%/foreach%>
+		<%/if%>
 		</div>
 	<%/foreach%>
 <%/block%>

@@ -16,7 +16,7 @@
         </div> 
         <header class="site-header">
             <div id="header-inner">
-                <div id="logo">Photo Gallery</div>
+                <div id="logo"><a href="/">Photo Gallery</a></div>
                 <div id="pulldown">
                     <input id="nav-input" type="checkbox" class="nav-unshown">
                     <label id="nav-open" for="nav-input"><span></span></label>
@@ -27,7 +27,7 @@
                                 <span>Category</span>
                                 <ul class="menu-second-level category">
                                     <%foreach from=$category item=row%>
-                                        <a href="category.php?category_id=<%$row.id%>"><li><%$row.name%></li></a>
+                                        <a href="index.php?category=<%$row.id%>"><li><%$row.name%></li></a>
                                     <%/foreach%>
                                 </ul>
                             </li>
@@ -36,7 +36,7 @@
                                 <span>Backnumber</span>
                                 <ul class="menu-second-level backnumber">
                                     <%foreach from=$years item=year%>
-                                        <a href="#<%$year%>"><li><%$year%></li></a>
+                                        <a href="index.php?year=<%$year%>"><li><%$year%></li></a>
                                     <%/foreach%>
                                 </ul>
                             </li>

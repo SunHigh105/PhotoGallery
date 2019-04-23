@@ -13,11 +13,26 @@ $dotenv->load();
 $dbo = new DataObject;
 $smarty = new My_Smarty;
 
-// Display Category
-$category = $dbo->category();
+// Display Pulldown
+$category = $dbo->allCategory();
+$years = $dbo->allYear();
 
-// Display Caption
-$caption = $dbo->photo();
+// Display Photo & Setting index
+$index = [];
+
+if(isset($_GET['category'])){
+	// Category
+	$photos = $dbo->photoByCategory((int)$_GET['category']);
+	$index[] = $dbo->category((int)$_GET['category']);
+}else if(isset($_GET['year'])){
+	// Year
+	$photos = $dbo->photoByYear((int)$_GET['year']);
+	$index[] = $_GET['year'];
+}else{
+	// Default
+	$photos = $dbo->photo();
+	$index = $years;
+}
 
 // Get Pictures from S3
 $s3client = S3Client::factory([
@@ -40,22 +55,14 @@ try {
 
 $IMG_URL = 'https://s3-ap-northeast-1.amazonaws.com/'.getenv('S3_BUCKET_NAME');
 
-// Setting date range
-$years = [];
-foreach($caption as $row){
-	$year = substr($row['date_token'], 0, 4);
-	if(!in_array($year, $years)){
-		$years[] = $year;
-	}
-}
 
 // Display params
 $param = [
 	'category' => $category,
-	'caption' => $caption,
-	'IMG_URL' => $IMG_URL,
-	'objects' => $result['Contents'],
-	'years' => $years
+	'years' => $years,
+	'photos' => $photos,
+	'index' => $index,
+	'IMG_URL' => $IMG_URL,	
 ];
 
 $smarty->view($param, 'index.tpl');
