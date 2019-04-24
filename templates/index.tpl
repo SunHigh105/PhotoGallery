@@ -11,14 +11,14 @@
 			<%foreach from=$photos item=photo%>
 				<%if $photo.date_token|substr:0:4 == $row%>
 					<figure class="col-3 photoframe" photo-id=<%$photo.id%> category=<%$photo.category_id%>>
-						<img src=<%$IMG_URL%>/<%$photo.capture_path%>>
+						<div><img src=<%$IMG_URL%>/<%$photo.capture_path%>></div>
 					</figure>
 				<%/if%>
 			<%/foreach%>
 		<%else%>
 			<%foreach from=$photos item=photo%>
 				<figure class="col-3 photoframe" photo-id=<%$photo.id%> category=<%$photo.category_id%>>
-					<img src=<%$IMG_URL%>/<%$photo.capture_path%>>
+					<div><img src=<%$IMG_URL%>/<%$photo.capture_path%>></div>
 				</figure>
 			<%/foreach%>
 		<%/if%>

@@ -27,6 +27,9 @@ $(document).ready(function(){
         $('.posts').text(total + ' posts');
     }
 
+    // 右クリック禁止
+    $('img').attr('oncontextmenu', "return false;");
+
     var endTime = new Date();
     console.log(endTime - startTime + "ms");
 
