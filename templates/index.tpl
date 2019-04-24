@@ -1,8 +1,11 @@
 <%extends file='parent.tpl'%>
 
 <%block name="content"%>
-	<%foreach from=$index item=row%>	
-		<h1 id="<%$row%>"><%$row%></h1>
+	<%foreach from=$index item=row%>
+		<div class="index">	
+			<h1 id="<%$row%>"><%$row%></h1>
+			<p class="posts"></p>
+		</div>
 		<div class="wrapper">
 		<%if $index|@count >= 2 %>
 			<%foreach from=$photos item=photo%>

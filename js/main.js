@@ -20,6 +20,13 @@ $(window).on('load',function(){
 })
 
 $(document).ready(function(){
+
+    var total = $('.photoframe').length;
+    var index = $('.wrapper').length;
+    if(index <= 1){
+        $('.posts').text(total + ' posts');
+    }
+
     var endTime = new Date();
     console.log(endTime - startTime + "ms");
 

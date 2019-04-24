@@ -9,11 +9,6 @@ ul, li{
     padding: 0;
 }
 
-h1{
-    font-weight: normal;
-    border-bottom: 1px solid rgba(0,0,0,.5975);
-}
-
 a{
     text-decoration: none;
     color: #000000;
@@ -160,6 +155,26 @@ ul.menu-first-level{
     cursor: pointer;
 }
 
+/* index */
+.index{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 50px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.5975);
+}
+
+.index h1{
+    margin: 0;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.index p{
+    text-align: right;
+    font-size: 20px;
+}
+
 /* popup */
 #popup-bg{
     display: none;
@@ -214,6 +229,7 @@ figure{
     align-content: center;
     grid-template-columns: auto;
     grid-gap: 30px 10px;
+    padding-top: 20px;
 }
 
 .photoframe{
@@ -226,8 +242,14 @@ figure{
 }
 
 /* footer */
+footer{
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
 footer p{
     text-align: center;
+    color:gray;
 }
 
 /*for tablet */
