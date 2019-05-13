@@ -76,9 +76,11 @@ $(document).ready(function(){
         closePopup();
     });
 
-    $('#popup-bg').click(function(){
-        closePopup();
-    })
+    $(document).on('click', '#popup-bg', function(e) {
+        if(!$(e.target).closest('.popup').length){
+            closePopup();
+        }
+    });
     
     // 年選択
     $('.backnumber li').click(function(){
